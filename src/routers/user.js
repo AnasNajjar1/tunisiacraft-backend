@@ -103,7 +103,7 @@ userRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => 
     if(user) {
         user.name = req.body.name || user.name;
         user.email = req.body.email || user.email;
-        user.isSeller = req.body.isSeller;
+        user.isSeller = req.body.isSeller || user.isSeller;
         user.isAdmin = req.body.isAdmin || user.isAdmin;
 
         const updatedUser = await user.save();
