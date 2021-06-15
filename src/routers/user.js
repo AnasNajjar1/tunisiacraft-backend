@@ -104,7 +104,7 @@ userRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => 
         user.name = req.body.name || user.name;
         user.email = req.body.email || user.email;
         user.isSeller = req.body.isSeller;
-        user.isAdmin = req.body.isAdmin;
+        user.isAdmin = req.body.isAdmin || user.isAdmin;
 
         const updatedUser = await user.save();
         res.send({ message: 'User Updated', user: updatedUser });
