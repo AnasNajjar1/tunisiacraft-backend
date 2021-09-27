@@ -7,6 +7,7 @@ const categoryRouter = require('./routers/category.js');
 const productRouter = require('./routers/product.js');
 const userRouter = require('./routers/user.js');
 const orderRouter = require('./routers/order.js');
+const deliveryMethodRouter = require('./routers/deliveryMethod.js');
 const uploadRouter = require('./routers/upload.js');
 
 
@@ -38,6 +39,7 @@ app.use('/api/users', userRouter);
 app.use('/api/categories', categoryRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
+app.use('/api/deliverymethods', deliveryMethodRouter);
 
 app.get('/api/config/paypal', (req, res) => {
     res.send(process.env.PAYPAL_CLIENT_ID || 'sb');

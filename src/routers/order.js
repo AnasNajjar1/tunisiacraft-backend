@@ -49,6 +49,8 @@ orderRouter.post('/', isAuth, expressAsyncHandler(async(req, res) => {
             orderItems: req.body.orderItems,
             shippingAddress: req.body.shippingAddress,
             paymentMethod: req.body.paymentMethod,
+            deliveryMethod: req.body.deliveryMethod,
+            deliveryStatus: '--',
             itemsPrice: req.body.itemsPrice,
             shippingPrice: req.body.shippingPrice,
             taxPrice: req.body.taxPrice,

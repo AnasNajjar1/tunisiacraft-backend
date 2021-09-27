@@ -33,6 +33,8 @@ const orderSchema = new mongoose.Schema({
     isPaid: { type: Boolean, default: false },
     paidAt: { type: Date },
     isDelivered: { type: Boolean, default: false },
+    deliveryMethod: { type: mongoose.Schema.Types.ObjectId, ref: 'DeliveryMethod', required: true },
+    deliveryStatus: { type: String, default: '--' },
     deliveredAt: { type: Date }
 }, {
     timestamps: true
