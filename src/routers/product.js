@@ -8,7 +8,7 @@ const productRouter = express.Router();
 
 productRouter.get('/', expressAsyncHandler(async (req, res) => {
 
-    const pageSize = 3;
+    const pageSize = 6;
     const page = Number(req.query.pageNumber) || 1;
 
     const seller = req.query.seller || '';
