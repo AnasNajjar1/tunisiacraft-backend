@@ -59,7 +59,6 @@ productRouter.post('/', isAuth, isSellerOrAdmin, expressAsyncHandler(async (req,
         image: '/images/p1.jpg',
         price: 0,
         category: '613bca0e6ecd2c0016185fa4',
-        brand: 'sample brand',
         countInStock: 0,
         rating: 0,
         numReviews: 0,
@@ -77,7 +76,7 @@ productRouter.put('/:id', isAuth, isSellerOrAdmin, expressAsyncHandler(async (re
         product.price = req.body.price;
         product.image = req.body.image;
         product.category = req.body.category;
-        product.brand = req.body.brand;
+        // product.brand = req.body.brand;
         product.countInStock = req.body.countInStock;
         product.description = req.body.description;
 
