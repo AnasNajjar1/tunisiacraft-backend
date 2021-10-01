@@ -56,7 +56,7 @@ productRouter.post('/', isAuth, isSellerOrAdmin, expressAsyncHandler(async (req,
     const product = new Product({
         name: 'sample name' + Date.now(),
         seller: req.user._id,
-        image: '/images/p1.jpg',
+        image: '/images/nopic.jpg',
         price: 0,
         category: '613bca0e6ecd2c0016185fa4',
         countInStock: 0,
