@@ -31,7 +31,7 @@ categoryRouter.get('/:id', expressAsyncHandler(async (req, res) => {
 categoryRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
     const category = new Category({
         name: 'sample name' + Date.now(),
-        image: '/images/p1.jpg'
+        image: '/images/nopic.jpg',
     });
     const createdCategory = await category.save();
     res.status(201).send({ message: 'CategoryCreated', category: createdCategory });
