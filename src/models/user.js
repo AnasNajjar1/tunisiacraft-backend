@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     isAdmin: { type: Boolean, default: false, required: true },
     isSeller: { type: Boolean, default: false, required: true },
     seller: {
-        logo: String,
+        logo: { type: String, default: '/images/profile.png' },
         description: String,
         rating: { type: Number, default: 0, required: true },
         numReviews: { type: Number, default: 0, required: true }
